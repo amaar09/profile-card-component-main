@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@400;700&family=Red+Hat+Display:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(0, 11%, 12%);
+
+}
+.container{
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    flex-wrap: wrap ;
+    align-items: center;
+    background: var(--Dark-cyan);
+    /* helps the circle C1 and C2 to flesh out */
+    mix-blend-mode: multiply;
+    position: relative;
+    /* this stops the scroll of the page which occurs due
+    to circle C2 */
+    overflow: hidden;
+}
+
+main {
+    overflow: hidden; 
+}
+
+.card {
+
+    width: 350px;
+    border-radius: 20px;
+    background: white;
+    /* overflow of image and making it round  */
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-header {
+    background-image: url(./images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 150px;
+}
+
+.card-body {
+    padding: 0 20px 30px;
+}
+
+.image-holder {
+    width: 100px;
+    height: 95px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    margin: -50px auto 30px auto;
+}
+
+.image-holder img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.name-age {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.age {
+    font-weight: 400;
+    color: hsl(0, 11%, 12%);
+    opacity: .8;
+    margin-left: 15px;
+}
+
+.city {
+    color: hsl(0, 11%, 12%);
+    opacity: .7;
+}
+
+.card-footer {
+    padding: 20px;
+    border-top: 1px solid hsl(0, 2%, 67%);
+}
+
+.card-footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-content: ; */
+
+}
+
+.card-footer ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-footer ul li span {
+    color: hsl(0, 11%, 12%);
+    opacity: 0.7;
+}
+
+.card-footer ul li strong {
+    font-size: 1.3rem;
+}
+
+
+
+/*GRAPHIC CIRCLES*/
+
+.circles img {
+    position: absolute;
+    z-index: -1;
+    /*animation*/
+    animation: circles 2s forwards;
+
+}
+
+.circles .c1 {
+    top: -554px;
+    left: -189px;
+    /*animation*/
+    transform: translate(-100px, -50px);
+}
+
+.circles .c2 {
+    /* bottom: -650px; */
+    top: 354px;
+    right: -175px;
+    /*animation*/
+    transform: translate(100px, 50px);
+}
+
+/*animation*/
+@keyframes circles {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media only screen and (max-width: 375px)  {
+    
+}
